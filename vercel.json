@@ -9,20 +9,18 @@
   "routes": [
     {
       "src": "/",
-      "dest": "server.js"
+      "dest": "server.js",
+      "methods": ["GET"]
     },
     {
       "src": "/api/(.*)",
-      "dest": "server.js"
+      "dest": "server.js",
+      "methods": ["GET", "POST", "OPTIONS"]
     },
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "server.js",
+      "methods": ["GET"]
     }
-  ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 60
-    }
-  }
+  ]
 }
